@@ -1,6 +1,6 @@
 %define module	Test-WWW-Mechanize
 %define name	perl-%{module}
-%define version 1.14
+%define version 1.16
 %define release %mkrel 1
 
 Name: 		%{name}
@@ -20,6 +20,7 @@ BuildRequires:  perl(Test::Builder::Tester)
 BuildRequires:  perl(URI)
 BuildRequires:  perl(Test::LongString)
 BuildRequires:  perl(WWW::Mechanize) 
+BuildRequires:  perl(HTML::Lint)
 BuildArch:      noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
