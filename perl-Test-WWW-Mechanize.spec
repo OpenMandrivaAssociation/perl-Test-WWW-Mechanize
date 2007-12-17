@@ -22,7 +22,6 @@ BuildRequires:  perl(Test::LongString)
 BuildRequires:  perl(WWW::Mechanize) 
 BuildRequires:  perl(HTML::Lint)
 BuildArch:      noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Test::WWW::Mechanize is a subclass of WWW::Mechanize that incorporates features
