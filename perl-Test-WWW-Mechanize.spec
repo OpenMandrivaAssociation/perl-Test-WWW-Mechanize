@@ -1,7 +1,7 @@
 %define module	Test-WWW-Mechanize
 %define name	perl-%{module}
 %define version 1.20
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name: 		%{name}
 Version: 	%{version}
