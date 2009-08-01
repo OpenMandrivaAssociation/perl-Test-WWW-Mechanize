@@ -1,16 +1,16 @@
-%define module	Test-WWW-Mechanize
-%define name	perl-%{module}
-%define version 1.24
-%define release %mkrel 1
+%define upstream_name	 Test-WWW-Mechanize
+%define upstream_version 1.24
 
-Name: 		%{name}
-Version: 	%{version}
-Release:	%{release} 
-License:	GPL or Artistic
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:    Testing-specific WWW::Mechanize subclass
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Summary:        Testing-specific WWW::Mechanize subclass
-URL:		http://search.cpan.org/dist/%{module}
-Source:		http://www.cpan.org/modules/by-module/Test/%{module}-%{version}.tar.bz2
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Test/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
@@ -22,14 +22,14 @@ BuildRequires:  perl(Test::LongString)
 BuildRequires:  perl(WWW::Mechanize) 
 BuildRequires:  perl(HTML::Lint)
 BuildArch:      noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Test::WWW::Mechanize is a subclass of WWW::Mechanize that incorporates features
 for web application testing.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -50,4 +50,3 @@ rm -rf %{buildroot}
 %doc Changes README
 %{perl_vendorlib}/Test
 %{_mandir}/man3/*
-
