@@ -14,13 +14,14 @@ Source0:	http://www.cpan.org/modules/by-module/Test/%{upstream_name}-%{upstream_
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
-BuildRequires:	perl(HTTP::Server::Simple)
 BuildRequires:  perl(Carp::Assert::More)
-BuildRequires:  perl(Test::Builder::Tester)
-BuildRequires:  perl(URI)
-BuildRequires:  perl(Test::LongString)
-BuildRequires:  perl(WWW::Mechanize) 
 BuildRequires:  perl(HTML::Lint)
+BuildRequires:	perl(HTTP::Server::Simple)
+BuildRequires:	perl(HTML::TreeBuilder)
+BuildRequires:  perl(Test::Builder::Tester)
+BuildRequires:  perl(Test::LongString)
+BuildRequires:  perl(URI)
+BuildRequires:  perl(WWW::Mechanize) 
 
 BuildArch:      noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
