@@ -38,6 +38,8 @@ for web application testing.
 %make
 
 %check
+# change listening port
+perl -pi -e 's/13432/17987/' t/TestServer.pm
 %make test
 
 %install
