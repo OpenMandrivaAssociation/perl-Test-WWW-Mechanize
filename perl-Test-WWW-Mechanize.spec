@@ -10,11 +10,8 @@ License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Test/%{upstream_name}-%{upstream_version}.tar.gz
-
-%if %{mdkversion} < 1010
-BuildRequires:	perl-devel
-%endif
 BuildRequires:  perl(Carp::Assert::More)
+BuildRequires:  perl(CGI)
 BuildRequires:  perl(HTML::Lint)
 BuildRequires:	perl(HTTP::Server::Simple)
 BuildRequires:	perl(HTML::TreeBuilder)
