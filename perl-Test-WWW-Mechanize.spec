@@ -1,15 +1,15 @@
 %define upstream_name	 Test-WWW-Mechanize
-%define upstream_version 1.34
+%define upstream_version 1.44
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Version:	%perl_convert_version 1.44
+Release:	1
 
 Summary:	Testing-specific WWW::Mechanize subclass
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Test/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Test/Test-WWW-Mechanize-1.44.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Carp::Assert::More)
@@ -138,4 +138,5 @@ perl -pi -e 's/13432/17987/' t/TestServer.pm
 
 * Sat Oct 01 2005 Michael Scherer <misc@mandriva.org> 1.06-1mdk
 - First mandriva package
+
 
