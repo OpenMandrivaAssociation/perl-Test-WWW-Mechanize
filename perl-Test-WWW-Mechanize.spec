@@ -44,7 +44,7 @@ perl -pi -e 's/13432/17987/' t/TestServer.pm
 %makeinstall_std
 
 %files
-%doc Changes README
+%doc Changes 
 %{perl_vendorlib}/Test
 %{_mandir}/man3/*
 
