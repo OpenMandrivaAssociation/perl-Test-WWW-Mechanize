@@ -1,15 +1,13 @@
 %define upstream_name	 Test-WWW-Mechanize
-%define upstream_version 1.44
-
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	1.44
+Release:	4
 
 Summary:	Testing-specific WWW::Mechanize subclass
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Test/Test-WWW-Mechanize-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Test/Test-WWW-Mechanize-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -30,7 +28,7 @@ Test::WWW::Mechanize is a subclass of WWW::Mechanize that incorporates features
 for web application testing.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -70,9 +68,7 @@ perl -pi -e 's/13432/17987/' t/TestServer.pm
 
 * Sat Aug 01 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 1.240.0-1mdv2010.0
 + Revision: 406188
-- rebuild using %%perl_convert_version
-
-* Sun Jan 18 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.24-1mdv2009.1
+- rebuild using %1.44 Sun Jan 18 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.24-1mdv2009.1
 + Revision: 330915
 - update to new version 1.24
 
